@@ -1,0 +1,57 @@
+.App {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 800px) {
+  .App {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+  overflow: hidden;
+  background: #333;
+}
+
+.content-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 250ms;
+}
+.content-wrapper:hover img {
+  transform: scale(1.1);
+}
+
+.content-wrapper p {
+  color: #fff;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  margin: 50px auto;
+}
+button {
+  height: 100%;
+  width: 250px;
+  font-size: 2em;
+}
+
+select {
+  height: 100%;
+}

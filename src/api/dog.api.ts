@@ -1,6 +1,6 @@
 export const fetchDogs = async (
   breed: string,
-  count: number = 9
+  count: number = 1
 ): Promise<string[]> => {
   const res = await fetch(
     `https://dog.ceo/api/breed/${breed}/images/random/${count}`
@@ -9,7 +9,7 @@ export const fetchDogs = async (
   return json.message;
 };
 
-export const fetchAllBreeds = async () => {
+export const fetchAllDogBreeds = async () => {
   const res = await fetch("https://dog.ceo/api/breeds/list/all");
   const json = await res.json();
   return Object.keys(json.message);
